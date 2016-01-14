@@ -72,17 +72,9 @@
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="20" y="314" width="335" height="53"/>
                                 </variation>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SWR-sH-Jtq">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                                <state key="normal" title="Calculate">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="20" y="253" width="335" height="53"/>
-                                </variation>
+                                <connections>
+                                    <action selector="btnClearACTION:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6FG-tu-gSR"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="29s-bd-Hzw">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
@@ -93,6 +85,20 @@
                                     <rect key="frame" x="20" y="555" width="335" height="77"/>
                                 </variation>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SWR-sH-Jtq">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <state key="normal" title="Calculate">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="20" y="253" width="335" height="53"/>
+                                </variation>
+                                <connections>
+                                    <action selector="btnCalculateACTION:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NRv-vL-jga"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <variation key="default">
@@ -103,8 +109,8 @@
                                 <exclude reference="Fec-Xn-nkz"/>
                                 <exclude reference="0f0-Wf-tMR"/>
                                 <exclude reference="PWK-ky-6Id"/>
-                                <exclude reference="SWR-sH-Jtq"/>
                                 <exclude reference="29s-bd-Hzw"/>
+                                <exclude reference="SWR-sH-Jtq"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -115,12 +121,18 @@
                                 <include reference="Fec-Xn-nkz"/>
                                 <include reference="0f0-Wf-tMR"/>
                                 <include reference="PWK-ky-6Id"/>
-                                <include reference="SWR-sH-Jtq"/>
                                 <include reference="29s-bd-Hzw"/>
+                                <include reference="SWR-sH-Jtq"/>
                             </mask>
                         </variation>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="lblTip" destination="DJ1-PV-6WP" id="sSB-Og-P7V"/>
+                        <outlet property="lblTipTotal" destination="29s-bd-Hzw" id="jom-xW-Brp"/>
+                        <outlet property="txtMealCost" destination="Fec-Xn-nkz" id="ZSo-GE-yR1"/>
+                        <outlet property="txtTipPercentage" destination="0f0-Wf-tMR" id="Ije-en-F4D"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

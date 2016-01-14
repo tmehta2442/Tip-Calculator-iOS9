@@ -10,6 +10,14 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var txtMealCost: UITextField!
+    @IBOutlet weak var txtTipPercentage: UITextField!
+
+    @IBOutlet weak var lblTip: UILabel!
+    @IBOutlet weak var lblTipTotal: UILabel!
+    
+    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -19,7 +27,12 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
 
+    @IBAction func btnCalculateACTION(sender: UIButton) {
+    }
 
+    @IBAction func btnClearACTION(sender: UIButton) {
+    }
 }
 
